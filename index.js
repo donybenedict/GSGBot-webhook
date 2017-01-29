@@ -33,18 +33,13 @@ restService.post('/webhook', function (req, res) {
     console.log('hook request');
 
     try {
-        var speech = 'empty speech';
+        var speech = '';
 
         if (req.body) {
             var requestBody = req.body;
 
             if (requestBody.result) {
                 speech = '';
-
-                if (requestBody.result.fulfillment) {
-                    speech += requestBody.result.fulfillment.speech;
-                    speech += ' ';
-                }
 
                 if (requestBody.result.action) {
                     var eventselector=requestBody.result.parameters.Events;
