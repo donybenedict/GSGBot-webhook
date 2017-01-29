@@ -7,10 +7,6 @@ const bodyParser = require('body-parser');
 const restService = express();
 restService.use(bodyParser.json());
 
-/*var cronJob = require('cron').CronJob;
-var myJob = new cronJob('00 30 11 * * 1-5', function(){...});
-myJob.start();*/
-
 var eventschedule = {
     slamNation:"SlamNation is happening on 3-02-2017 9 AM - 12 PM in Room 8",
     youveGotMail:"You've Got Mail is happening on 3-02-2017 9 AM - 12 PM in Upper Seminar Room",
@@ -60,7 +56,7 @@ restService.post('/webhook', function (req, res) {
             data: [{}],
             contextOut: [{
                 name: 'schedule-given',
-                lifespan: 1,
+                lifespan: 5,
                 parameters: {
                     eventidentified: requestBody.result.action
                 },
