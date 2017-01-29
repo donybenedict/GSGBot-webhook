@@ -62,20 +62,18 @@ restService.post('/webhook', function (req, res) {
         }
 
         console.log('result: ', speech);
-
-        var detected = requestBody.result.action; 
         
         return res.json({
             speech: speech,
             displayText: speech,
-            data:({}),
-            contextOut: ({
+            data: [{}],
+            contextOut: [{
                 name: 'schedule',
                 lifespan: 1,
-                parameters ({
-                    eventName: 'test'
+                parameters: {
+                    eventidentified: "city"
                 },
-            }),
+            }],
             source: 'gsgbot'
         });
     } catch (err) {
