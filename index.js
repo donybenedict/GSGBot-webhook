@@ -6,6 +6,7 @@ const bodyParser = require('body-parser');
 
 const restService = express();
 restService.use(bodyParser.json());
+var timing = ["3-02-2017 9 AM - 12 PM","3-02-2017 9 AM - 12 PM","3-02-2017 10 AM - 11 AM","3-02-2017 11 AM - 3 PM","3-02-2017 9 AM - 5 PM","3-02-2017 9 AM - 4 PM","3-02-2017 9 AM - 2:30 PM","3-02-2017 3 PM - 6 PM","3-02-2017 9 AM - 12 PM","3-02-2017 9 AM - 1 PM","3-02-2017 2 PM - 5 PM","3-02-2017 9 AM - 6 PM","3-02-2017 10 AM - 2 PM","3-02-2017 2 PM - 3:30 PM","3-02-2017 10 AM - 12 PM","3-02-2017 10 AM - 4 PM","3-02-2017 7 AM - 8 PM","3-02-2017 9 AM - 4 PM","3-02-2017 9 AM - 5 PM"]
 
 restService.post('/hook', function (req, res) {
 
@@ -36,7 +37,7 @@ restService.post('/hook', function (req, res) {
         return res.json({
             speech: speech,
             displayText: speech,
-            source: 'apiai-webhook-sample'
+            source: 'GSGbot'
         });
     } catch (err) {
         console.error("Can't process request", err);
