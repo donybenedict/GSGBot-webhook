@@ -28,9 +28,6 @@ var eventschedule = {
     tapestryandgreenquoteboard:"Tapestry and Green Quote Board is happening on 3-02-2017 9 AM - 5 PM"
 };
 
-restService.post('/', function (req, res) {
-    	res.send('hello world i am a secret bot')       
-});
 restService.post('/webhook', function (req, res) {
 
     console.log('hook request');
@@ -66,11 +63,19 @@ restService.post('/webhook', function (req, res) {
 
         console.log('result: ', speech);
 
+        var detected = requestBody.result.action; 
+        
         return res.json({
             speech: speech,
             displayText: speech,
             data:({}),
-            contextOut: ({}),
+            contextOut: ({
+                name: 'schedule',
+                lifespan: 1,
+                parameters ({
+                    eventName: 'test'
+                },
+            }),
             source: 'gsgbot'
         });
     } catch (err) {
