@@ -28,7 +28,7 @@ var eventschedule = {
     tapestryandgreenquoteboard:"Tapestry and Green Quote Board is happening on 3-02-2017 9 AM - 5 PM"
 };
 
-restService.post('/hook', function (req, res) {
+restService.post('/webhook', function (req, res) {
 
     console.log('hook request');
 
