@@ -42,20 +42,18 @@ restService.post('/webhook', function (req, res) {
                 speech = '';
 
                 if (requestBody.result.action) {
-                    var eventselector=requestBody.result.parameters.Events;
-                    console.log('Found event', eventselector);  
-                    console.log('Indexed value',eventschedule[eventselector]);                    
-                    speech += eventschedule[eventselector];
+                    var eventselector=requestBody.result.parameters.Events;                
+                    speech = eventschedule[eventselector];
                 }
 
                 var parameters = requestBody.result.parameters;
-                if (parameters){
+                /*if (parameters){
                     for (var p in parameters){
                         if(parameters.hasOwnProperty(p) ) {
                             speech += p + ": " + parameters[p] + "; ";
                         }
                     }
-                }
+                }*/
             }
         }
 
