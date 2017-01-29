@@ -45,15 +45,6 @@ restService.post('/webhook', function (req, res) {
                     var eventselector=requestBody.result.parameters.Events;                
                     speech = eventschedule[eventselector];
                 }
-
-                var parameters = requestBody.result.parameters;
-                /*if (parameters){
-                    for (var p in parameters){
-                        if(parameters.hasOwnProperty(p) ) {
-                            speech += p + ": " + parameters[p] + "; ";
-                        }
-                    }
-                }*/
             }
         }
 
