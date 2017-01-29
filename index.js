@@ -47,7 +47,7 @@ restService.post('/webhook', function (req, res) {
                 }
 
                 if (requestBody.result.action) {
-                    speech += 'action: ' + requestBody.result.action + ' ';
+                    speech += eventschedule[requestBody.result.action];
                 }
 
                 var parameters = requestBody.result.parameters;
@@ -68,10 +68,10 @@ restService.post('/webhook', function (req, res) {
             displayText: speech,
             data: [{}],
             contextOut: [{
-                name: 'schedule',
+                name: 'schedule-given',
                 lifespan: 1,
                 parameters: {
-                    eventidentified: "city"
+                    eventidentified: requestBody.result.action
                 },
             }],
             source: 'gsgbot'
