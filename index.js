@@ -47,7 +47,10 @@ restService.post('/webhook', function (req, res) {
                 }
 
                 if (requestBody.result.action) {
-                    speech += eventschedule[requestBody.result.action];
+                    var eventselector=requestBody.result.parameters.Events;
+                    console.log('Found event', eventselector);  
+                    console.log('Indexed value',eventschedule[eventselector]);                    
+                    speech += eventschedule[eventselector];
                 }
 
                 var parameters = requestBody.result.parameters;
