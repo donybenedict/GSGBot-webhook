@@ -33,7 +33,7 @@ restService.post('/webhook', function (req, res) {
     console.log('hook request');
 
     try {
-        var speech = '';
+        var speech = 'Empty Response';
 
         if (req.body) {
             var requestBody = req.body;
