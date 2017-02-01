@@ -7,6 +7,8 @@ const bodyParser = require('body-parser');
 const restService = express();
 restService.use(bodyParser.json());
 
+var schedule = require('node-schedule');
+
 var eventschedule = {
     slamNation:"SlamNation is happening on 3-02-2017 9 AM - 12 PM in Room 8",
     youveGotMail:"You've Got Mail is happening on 3-02-2017 9 AM - 12 PM in Upper Seminar Room",
@@ -44,6 +46,11 @@ restService.post('/webhook', function (req, res) {
                 if (requestBody.result.action) {
                     var eventselector=requestBody.result.parameters.Events;                
                     speech = eventschedule[eventselector];
+                    let startTime = new Date(Date.now() + 5000);
+                    let endTime = new Date(startTime.getTime() + 5000);
+                    var j = schedule.scheduleJob({ start: startTime, end: endTime, rule: '*/1 * * * * *' }, function(){
+                    console.log('Time for tea!');
+                    });
                 }
             }
         }
