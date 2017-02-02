@@ -53,7 +53,16 @@ restService.post('/webhook', function (req, res) {
         return res.json({
             speech: speech,
             displayText: speech,
-            data: [{}],
+            data: [{
+                facebook: {
+                    attachment": {
+                        type: 'image',
+                        payload: {
+                            url:'https://petersapparel.com/img/shirt.png'
+                        }
+                    }
+                }
+            }],
             contextOut: [{
                 name: 'schedule-given',
                 lifespan: 5,
