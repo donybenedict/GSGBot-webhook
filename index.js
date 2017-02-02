@@ -53,7 +53,7 @@ restService.post('/webhook', function (req, res) {
         return res.json({
             speech: speech,
             displayText: speech,
-            data: [{
+            data: {
                 facebook: {
                     message: {
                         attachment: {
@@ -64,7 +64,7 @@ restService.post('/webhook', function (req, res) {
                         }
                     }
                 }
-            }],
+            },
             contextOut: [{
                 name: 'schedule-given',
                 lifespan: 5,
