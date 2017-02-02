@@ -69,29 +69,46 @@ restService.post('/webhook', function (req, res) {
         }
 
         console.log('result: ', speech);
-        
-        return res.json({
-            speech: speech,
-            displayText: speech,
-            data: {
-                facebook: {
-                        attachment: {
-                            type: 'image',
-                            payload: {
-                                url: imageselector 
+//remove this section after images come in        
+        if (typeof speech !== 'undefined') {
+            return res.json({
+                speech: speech,
+                displayText: speech,
+                data: {},
+                contextOut: [{
+                    name: 'schedule-given',
+                    lifespan: 5,
+                    parameters: {
+                        eventidentified: requestBody.result.action
+                    },
+                }],
+                source: 'gsgbot'
+            });
+        } else {
+            return res.json({
+                speech: speech,
+                displayText: speech,
+                data: {
+                    facebook: {
+                            attachment: {
+                                type: 'image',
+                                payload: {
+                                    url: imageselector 
+                                }
                             }
-                        }
-                }
-            },
-            contextOut: [{
-                name: 'schedule-given',
-                lifespan: 5,
-                parameters: {
-                    eventidentified: requestBody.result.action
+                    }
                 },
-            }],
-            source: 'gsgbot'
-        });
+                contextOut: [{
+                    name: 'schedule-given',
+                    lifespan: 5,
+                    parameters: {
+                        eventidentified: requestBody.result.action
+                    },
+                }],
+                source: 'gsgbot'
+            });            
+        }
+
     } catch (err) {
         console.error("Can't process request", err);
 
