@@ -83,7 +83,7 @@ restService.post('/webhook', function (req, res) {
                         attachment: {
                             type: 'image',
                             payload: {
-                                url: imageurl + 
+                                url: imageselector 
                             }
                         }
                 }
