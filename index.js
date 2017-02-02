@@ -41,10 +41,10 @@ restService.post('/webhook', function (req, res) {
     try {
         var speech = 'Empty Response';
         var imageselector = '';
-        var eventselector=requestBody.result.parameters.Events;
 
         if (req.body) {
             var requestBody = req.body;
+            var eventselector=requestBody.result.parameters.Events;            
 
             if (requestBody.result) {
                 speech = '';
