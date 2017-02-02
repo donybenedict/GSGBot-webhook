@@ -17,9 +17,13 @@ var eventschedule = {
     izraz:"izraz_feb03",
     soloTrioCompetition:"soloandtrio_feb03",
     malhaar:"malhaar_feb03",
+    emakimono:"emakimono-feb03",
+};
+
+
+var eventschedule_noimage = {
     sugam:"Sugam is happening on 3-02-2017 2 PM - 5 PM",
     kairosPhotoExhibition:"Kairos Photo Exhibition is happening on 3-02-2017 9 AM - 6 PM",
-    emakimono:"emakimono-feb03",
     spotOn:"Spot On is happening on 3-02-2017 2 PM - 3:30 PM",
     musidora:"Musidora is happening on 3-02-2017 10 AM - 12 PM",
     umbrellaPainting:"Umbrella Painting is happening on 3-02-2017 10 AM - 4 PM",
@@ -37,6 +41,7 @@ restService.post('/webhook', function (req, res) {
     try {
         var speech = 'Empty Response';
         var imageselector = '';
+        var eventselector=requestBody.result.parameters.Events;
 
         if (req.body) {
             var requestBody = req.body;
@@ -44,10 +49,21 @@ restService.post('/webhook', function (req, res) {
             if (requestBody.result) {
                 speech = '';
 
+/*comment when all images come in
+                
                 if (requestBody.result.action) {
                     var eventselector=requestBody.result.parameters.Events;                
                     //speech = eventschedule[eventselector];
                     imageselector =  imageurl + eventschedule[eventselector] + ".png";
+                }
+*/
+                if (requestBody.result.action) {
+                    if (obj.hasOwnProperty(requestBody.result.parameters.Events)) {             
+                        imageselector =  imageurl + eventschedule[eventselector] + ".png";
+                    }
+                    else {
+                        speech = eventschedule_noimage[eventselector];                        
+                    }
                 }
             }
         }
