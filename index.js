@@ -27,9 +27,20 @@ var eventschedule_noimage = {
     spotOn:"Spot On is happening on 3-02-2017 2 PM - 3:30 PM",
     musidora:"Musidora is happening on 3-02-2017 10 AM - 12 PM",
     umbrellaPainting:"Umbrella Painting is happening on 3-02-2017 10 AM - 4 PM",
-    hiveexhibition :"Hive Exhibition is happening on 3-02-2017 7 AM - 8 PM",
+    exhibition :"Exhibition is happening on 3-02-2017 7 AM - 8 PM",
     jewellerymakingworkshop:"Jewellery Making Workshop is happening on 3-02-2017 9 AM - 4 PM",
-    tapestryandgreenquoteboard:"Tapestry and Green Quote Board is happening on 3-02-2017 9 AM - 5 PM"
+    tapestryandgreenquoteboard:"Tapestry and Green Quote Board is happening on 3-02-2017 9 AM - 5 PM",
+    writeMeATale:"Write Me A Tale is happening on  03-02-2017  from 9 am - 12 pm in Upper Seminar Room",
+    popCultureQuiz:"Pop Culture Quiz is happening on  03-02-2017  from 1:30-4pm in 27 + 28",
+    indiaQuiz:"India Quiz is happening on  03-02-2017  from 10am - 1pm in 27 + 28",
+    harf:"Harf is happening on  03-02-2017  from 9 am - 4 pm in G2 , G3",
+    acapella :"Acapella event  is happening on  03-02-2017  from 9 - 11:30 am in Auditorium ",
+    saaz:"Saaz is happening on  03-02-2017  from 9 am- 1 pm in Bamboo Hut",
+    amalgam:"Amalgam is happening on  03-02-2017  from 3 pm - 6 pm in Auditorium",
+    mudra:"Mudra is happening on  03-02-2017  from 12 pm - 3 pm in Auditorium",
+    chalchitraKaManchitra:"Chalchitra ka Manchitra is happening on  03-02-2017  from 10 am - 12 pm in Media Lab",
+    musicInterpretationCompetition:"Music Interpretation Competition is happening on  03-02-2017  from 10am - 2pm in New Common Room",
+    potteryWorkshop:"Pottery workshop is happening on  03-02-2017  from 9 am - 4 pm in Outside Nescafe"
 };
 
 var imageurl = "http://livon.allsocialassets.com/botimages/";
