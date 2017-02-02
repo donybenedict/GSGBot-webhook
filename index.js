@@ -47,7 +47,7 @@ restService.post('/webhook', function (req, res) {
                 if (requestBody.result.action) {
                     var eventselector=requestBody.result.parameters.Events;                
                     //speech = eventschedule[eventselector];
-                    imageselector =  imageurl + eventschedule[eventselector];
+                    imageselector =  imageurl + eventschedule[eventselector] + ".png";
                 }
             }
         }
