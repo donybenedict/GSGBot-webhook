@@ -58,7 +58,7 @@ restService.post('/webhook', function (req, res) {
                 }
 */
                 if (requestBody.result.action) {
-                    if (obj.hasOwnProperty(requestBody.result.parameters.Events)) {             
+                    if (eventschedule.hasOwnProperty(requestBody.result.parameters.Events)) {             
                         imageselector =  imageurl + eventschedule[eventselector] + ".png";
                     }
                     else {
