@@ -70,21 +70,8 @@ restService.post('/webhook', function (req, res) {
 
         console.log('result: ', speech);
 //remove this section after images come in        
-        if (typeof speech !== 'undefined') {
-            return res.json({
-                speech: speech,
-                displayText: speech,
-                data: {},
-                contextOut: [{
-                    name: 'schedule-given',
-                    lifespan: 5,
-                    parameters: {
-                        eventidentified: requestBody.result.action
-                    },
-                }],
-                source: 'gsgbot'
-            });
-        } else {
+        if (speech == '') {
+
             return res.json({
                 speech: speech,
                 displayText: speech,
@@ -106,7 +93,22 @@ restService.post('/webhook', function (req, res) {
                     },
                 }],
                 source: 'gsgbot'
-            });            
+            });                
+
+        } else if(typeof speech !== 'undefined') {
+            return res.json({
+                speech: speech,
+                displayText: speech,
+                data: {},
+                contextOut: [{
+                    name: 'schedule-given',
+                    lifespan: 5,
+                    parameters: {
+                        eventidentified: requestBody.result.action
+                    },
+                }],
+                source: 'gsgbot'
+            });        
         }
 
     } catch (err) {
