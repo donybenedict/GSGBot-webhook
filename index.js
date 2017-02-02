@@ -8,6 +8,27 @@ const restService = express();
 restService.use(bodyParser.json());
 
 var eventschedule = {
+    slamNation:"slamnation_feb03",
+    youveGotMail:"yougotmail_feb03",
+    collegeGeneralQuiz :"collegequiz_feb03",
+    tarkvyuh:"tarkvyuh_feb03",
+    spandan:"spandan_feb03",
+    yavnika:"yavnika-feb03",
+    izraz:"izraz_feb03",
+    soloTrioCompetition:"soloandtrio_feb03",
+    malhaar:"malhaar_feb03",
+    sugam:"Sugam is happening on 3-02-2017 2 PM - 5 PM",
+    kairosPhotoExhibition:"Kairos Photo Exhibition is happening on 3-02-2017 9 AM - 6 PM",
+    emakimono:"emakimono-feb03",
+    spotOn:"Spot On is happening on 3-02-2017 2 PM - 3:30 PM",
+    musidora:"Musidora is happening on 3-02-2017 10 AM - 12 PM",
+    umbrellaPainting:"Umbrella Painting is happening on 3-02-2017 10 AM - 4 PM",
+    hiveexhibition :"Hive Exhibition is happening on 3-02-2017 7 AM - 8 PM",
+    jewellerymakingworkshop:"Jewellery Making Workshop is happening on 3-02-2017 9 AM - 4 PM",
+    tapestryandgreenquoteboard:"Tapestry and Green Quote Board is happening on 3-02-2017 9 AM - 5 PM"
+};
+/*
+var eventschedule = {
     slamNation:"SlamNation is happening on 3-02-2017 9 AM - 12 PM in Room 8",
     youveGotMail:"You've Got Mail is happening on 3-02-2017 9 AM - 12 PM in Upper Seminar Room",
     collegeGeneralQuiz :"College General Quiz prelims is happening on 3-02-2017 10 AM - 11 AM and finals on 3-02-2017 11 AM - 3 PM",
@@ -26,9 +47,9 @@ var eventschedule = {
     hiveexhibition :"Hive Exhibition is happening on 3-02-2017 7 AM - 8 PM",
     jewellerymakingworkshop:"Jewellery Making Workshop is happening on 3-02-2017 9 AM - 4 PM",
     tapestryandgreenquoteboard:"Tapestry and Green Quote Board is happening on 3-02-2017 9 AM - 5 PM"
-};
+};*/
 
-var imageurl = "http://www.clker.com/cliparts/n/f/T/E/n/2/wew-dsdsd-sdsd-hi.png";
+var imageurl = "http://livon.allsocialassets.com/botimages";
 
 restService.post('/webhook', function (req, res) {
 
@@ -36,6 +57,7 @@ restService.post('/webhook', function (req, res) {
 
     try {
         var speech = 'Empty Response';
+        var imageselector = '';
 
         if (req.body) {
             var requestBody = req.body;
@@ -45,7 +67,8 @@ restService.post('/webhook', function (req, res) {
 
                 if (requestBody.result.action) {
                     var eventselector=requestBody.result.parameters.Events;                
-                    speech = eventschedule[eventselector];
+                    //speech = eventschedule[eventselector];
+                    imageselector =  imageurl + eventschedule[eventselector];
                 }
             }
         }
@@ -60,7 +83,7 @@ restService.post('/webhook', function (req, res) {
                         attachment: {
                             type: 'image',
                             payload: {
-                                url: imageurl
+                                url: imageurl + 
                             }
                         }
                 }
