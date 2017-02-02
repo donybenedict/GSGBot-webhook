@@ -55,7 +55,7 @@ restService.post('/webhook', function (req, res) {
             displayText: speech,
             data: [{
                 facebook: {
-                    attachment": {
+                    attachment: {
                         type: 'image',
                         payload: {
                             url:'https://petersapparel.com/img/shirt.png'
