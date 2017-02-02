@@ -55,14 +55,12 @@ restService.post('/webhook', function (req, res) {
             displayText: speech,
             data: {
                 facebook: {
-                    message: {
                         attachment: {
                             type: 'image',
                             payload: {
-                                url:'https://petersapparel.com/img/shirt.png'
+                                url:'http://www.clker.com/cliparts/n/f/T/E/n/2/wew-dsdsd-sdsd-hi.png'
                             }
                         }
-                    }
                 }
             },
             contextOut: [{
