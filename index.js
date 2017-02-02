@@ -28,6 +28,8 @@ var eventschedule = {
     tapestryandgreenquoteboard:"Tapestry and Green Quote Board is happening on 3-02-2017 9 AM - 5 PM"
 };
 
+var imageurl = "http://www.clker.com/cliparts/n/f/T/E/n/2/wew-dsdsd-sdsd-hi.png";
+
 restService.post('/webhook', function (req, res) {
 
     console.log('hook request');
@@ -58,7 +60,7 @@ restService.post('/webhook', function (req, res) {
                         attachment: {
                             type: 'image',
                             payload: {
-                                url:'http://www.clker.com/cliparts/n/f/T/E/n/2/wew-dsdsd-sdsd-hi.png'
+                                url: imageurl
                             }
                         }
                 }
