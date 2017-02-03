@@ -51,8 +51,7 @@ var eventschedule_noimage = {
     baila:"Baila is happening on  05-02-2017  from  3 pm - 6 pm in Auditorium",
     adMakingCompetition:"Ad Making Competition is happening on  05-02-2017  from  10 am - 12 pm in Media Lab",
     stillLifePainting:"Still Life Painting is happening on  05-02-2017  from  9 am - 1 pm in New Common Room",
-    exhibition:"Exhibition is happening on  05-02-2017  from  8 am - 6 pm in Amphitheatre top part",
-    treasureHunt :"Treasure hunt  is happening on  05-02-2017  from  12 pm- 3 pm in Outside Nescafe"
+    treasureHunt:"Treasure hunt  is happening on  05-02-2017  from  12 pm- 3 pm in Outside Nescafe"
 };
 
 var imageurl = "http://livon.allsocialassets.com/botimages/";
