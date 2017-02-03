@@ -10,48 +10,53 @@ restService.use(bodyParser.json());
 var eventschedule = {
     slamNation:"slamnation_feb03",
     youveGotMail:"yougotmail_feb03",
-    collegeGeneralQuiz :"collegequiz_feb03",
-    tarkvyuh:"tarkvyuh_feb03",
     spandan:"spandan_feb03",
     yavnika:"yavnika-feb03",
     izraz:"izraz_feb03",
     soloTrioCompetition:"soloandtrio_feb03",
     malhaar:"malhaar_feb03",
-    emakimono:"emakimono-feb03",
+    acapella:"acapella",
+    harf:"harf",
+    mudra:"mudra",
+    popCultureQuiz:"popCultureQuiz",
+    saaz:"saaz",
+    writeMeATale:"writeMeATale"
+    storytellingCompetition:"storytellingCompetition",  
+    thingsOnlyGetVerse:"ngsOnlyGetVerse",
+    nukkad:"nukkad",
+    baila:"baila",
+    battleOfBands:"battleOfBands",
+    sangam:"sangam",    
 };
 
 
 var eventschedule_noimage = {
-    sugam:"Sugam is happening on 3-02-2017 2 PM - 5 PM",
-    kairosPhotoExhibition:"Kairos Photo Exhibition is happening on 3-02-2017 9 AM - 6 PM",
-    spotOn:"Spot On is happening on 3-02-2017 2 PM - 3:30 PM",
-    musidora:"Musidora is happening on 3-02-2017 10 AM - 12 PM",
-    umbrellaPainting:"Umbrella Painting is happening on 3-02-2017 10 AM - 4 PM",
-    exhibition :"Exhibition is happening on 3-02-2017 7 AM - 8 PM",
-    jewellerymakingworkshop:"Jewellery Making Workshop is happening on 3-02-2017 9 AM - 4 PM",
-    tapestryandgreenquoteboard:"Tapestry and Green Quote Board is happening on 3-02-2017 9 AM - 5 PM",
-    writeMeATale:"Write Me A Tale is happening on  04-02-2017  from 9 am - 12 pm in Upper Seminar Room",
-    popCultureQuiz:"Pop Culture Quiz is happening on  04-02-2017  from 1:30-4pm in 27 + 28",
-    indiaQuiz:"India Quiz is happening on  04-02-2017  from 10am - 1pm in 27 + 28",
-    harf:"Harf is happening on  04-02-2017  from 9 am - 4 pm in G2 , G3",
-    acapella :"Acapella event  is happening on  04-02-2017  from 9 - 11:30 am in Auditorium ",
-    saaz:"Saaz is happening on  04-02-2017  from 9 am- 1 pm in Bamboo Hut",
-    amalgam:"Amalgam is happening on  04-02-2017  from 3 pm - 6 pm in Auditorium",
-    mudra:"Mudra is happening on  04-02-2017  from 12 pm - 3 pm in Auditorium",
-    chalchitraKaManchitra:"Chalchitra ka Manchitra is happening on  04-02-2017  from 10 am - 12 pm in Media Lab",
-    musicInterpretationCompetition:"Music Interpretation Competition is happening on  04-02-2017  from 10am - 2pm in New Common Room",
-    potteryWorkshop:"Pottery workshop is happening on  04-02-2017  from 9 am - 4 pm in Outside Nescafe",
-    storytellingCompetition:"Storytelling competition is happening on  05-02-2017  from  10 am - 1 pm in Room 8 ",
-    thingsOnlyGetVerse:"Things Only Get Verse is happening on  05-02-2017  from  9 am - 12 pm in Upper Seminar Room",
-    flamesQuiz:"FLAMES Quiz is happening on  05-02-2017  from  10am - 11 am in Room 27 + Room 28",
-    battleOfBands :"Battle of Bands  is happening on  05-02-2017  from  9 am - 2 pm in The Stage",
-    sangam:"Sangam is happening on  05-02-2017  from  9 am - 2 pm in Auditorium",
-    jugalGaayan:"Jugal Gaayan is happening on  05-02-2017  from  2 pm - 5 pm in NCR",
-    nukkad:"Nukkad is happening on  05-02-2017  from  9 am - 5 pm in Amphitheatre",
-    baila:"Baila is happening on  05-02-2017  from  3 pm - 6 pm in Auditorium",
-    adMakingCompetition:"Ad Making Competition is happening on  05-02-2017  from  10 am - 12 pm in Media Lab",
-    stillLifePainting:"Still Life Painting is happening on  05-02-2017  from  9 am - 1 pm in New Common Room",
-    treasureHunt:"Treasure hunt  is happening on  05-02-2017  from  12 pm- 3 pm in Outside Nescafe"
+    sugam:"Sugam is happening on 3-02-2017 from 2 PM - 5 PM in New Common Room",
+    kairosPhotoExhibition:"Kairos Photo Exhibition is happening on 3rd, 4th and 5th of February from 9 AM - 6 PM in Exhibition Hall 1",
+    spotOn:"Spot On is happening on 3-02-2017 from 2 PM - 3:30 PM in G1",
+    musidora:"Musidora is happening on 3-02-2017 from 10 AM - 12 PM in Media Lab",
+    umbrellaPainting:"Umbrella Painting is happening on 3-02-2017 from 10 AM - 4 PM in Amphitheatre",
+    exhibition:"Hive Exhibition is happening on 3rd, 4th and 5th of February from 7 am to 8 pm, 7 am to 8 pm, 8 am to 6 pm in Amphitheatre top part and Bamboo Area",
+    jewellerymakingworkshop:"Jewellery Making Workshop is happening on 3-02-2017 from 9 AM - 4 PM outside Nescafe",
+    tapestryandgreenquoteboard:"Tapestry and Green Quote Board is happening on 3rd, 4th and 5th of February from 9 AM - 5 PM outside new Common Room",
+    writeMeATale:"Write Me A Tale is happening on 04-02-2017 from 9 am - 12 pm in Upper Seminar Room",
+    popCultureQuiz:"Pop Culture Quiz is happening on 04-02-2017 from 1:30-4pm in Room 27 and 28",
+    indiaQuiz:"India Quiz is happening on 04-02-2017 from 10am - 1pm in Room 27 and 28",
+    harf:"Harf is happening on 04-02-2017 from 9 am - 4 pm in G2 and G3",
+    saaz:"Saaz is happening on 04-02-2017 from 9 am- 1 pm in Bamboo Hut",
+    amalgam:"Amalgam is happening on 04-02-2017 from 3 pm - 6 pm in Auditorium",
+    mudra:"Mudra is happening on 04-02-2017 from 12 pm - 3 pm in Auditorium",
+    chalchitraKaManchitra:"Chalchitra ka Manchitra is happening on 04-02-2017 from 10 am - 12 pm in Media Lab",
+    musicInterpretationCompetition:"Music Interpretation Competition is happening on 04-02-2017 from 10 am - 2pm in New Common Room",
+    potteryWorkshop:"Pottery workshop is happening on 4th and 5th February from 9 am - 4 pm outside Nescafe",
+    flamesQuiz:"FLAMES Quiz is happening on 05-02-2017 from 10 am - 3 am in Room 27 and 28",
+    jugalGaayan:"Jugal Gaayan is happening on 05-02-2017 from 2 pm - 5 pm in NCR",
+    adMakingCompetition:"Ad Making Competition is happening on 05-02-2017 from 10 am - 12 pm in Media Lab",
+    stillLifePainting:"Still Life Painting is happening on 05-02-2017 from 9 am - 1 pm in New Common Room",
+    treasureHunt:"Treasure hunt is happening on 05-02-2017 from 12 pm- 3 pm outside Nescafe",
+    collegeGeneralQuiz :"College General Quiz is happening on 03-02-2017 from 10 am - 3 pm in Room 27 and 28",
+    tarkvyuh:"Tarkvyuh is happening on 3rd and 4th of February from 9 am to 5 pm in New Conference Hall and first, second & third floor of the New Building",
+    emakimono:"Emakimono Level 1, 2 and Final are happening on 3rd, 4th and 5th of February from 10 am to 2 pm, 11 am to 1 pm, 11 am to 1 pm in G1"       
 };
 
 var imageurl = "http://livon.allsocialassets.com/botimages/";
@@ -71,14 +76,6 @@ restService.post('/webhook', function (req, res) {
             if (requestBody.result) {
                 speech = '';
 
-/*comment when all images come in
-                
-                if (requestBody.result.action) {
-                    var eventselector=requestBody.result.parameters.Events;                
-                    //speech = eventschedule[eventselector];
-                    imageselector =  imageurl + eventschedule[eventselector] + ".png";
-                }
-*/
                 if (requestBody.result.action) {
                     if (eventschedule.hasOwnProperty(requestBody.result.parameters.Events)) {             
                         imageselector =  imageurl + eventschedule[eventselector] + ".png";
@@ -91,7 +88,7 @@ restService.post('/webhook', function (req, res) {
         }
 
         console.log('result: ', speech);
-//remove this section after images come in        
+    
         if (speech == '') {
 
             return res.json({
