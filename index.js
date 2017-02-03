@@ -50,13 +50,13 @@ restService.post('/webhook', function (req, res) {
     console.log('hook request');
 
     try {
-        var speech = 'Empty Response';
+        var speech = '';
         var imageselector = '';
 
         if (req.body) {
             var requestBody = req.body;
             var eventselector=requestBody.result.parameters.Events;            
-
+            console.log('Event Selector: ' + eventselector);
             if (requestBody.result) {
                 speech = '';
 
@@ -106,7 +106,7 @@ restService.post('/webhook', function (req, res) {
                 source: 'gsgbot'
             });                
 
-        } else if(typeof speech !== 'undefined') {
+        } else if (typeof speech !== 'undefined') {
             return res.json({
                 speech: speech,
                 displayText: speech,
