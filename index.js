@@ -20,13 +20,13 @@ var eventschedule = {
     mudra:"mudra",
     popCultureQuiz:"popCultureQuiz",
     saaz:"saaz",
-    writeMeATale:"writeMeATale"
+    writeMeATale:"writeMeATale",
     storytellingCompetition:"storytellingCompetition",  
     thingsOnlyGetVerse:"ngsOnlyGetVerse",
     nukkad:"nukkad",
     baila:"baila",
     battleOfBands:"battleOfBands",
-    sangam:"sangam",    
+    sangam:"sangam"    
 };
 
 
